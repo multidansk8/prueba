@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const btnFill = document.querySelector('#fill');
+            btnFill.addEventListener('click', expensiveOp);
+
+            const btnAlert = document.querySelector('#alert');
+            btnAlert.addEventListener('click', function(){
+                alert('Hello World');
+        })
+        });
         function expensiveOp() {
             for (i = 0; i < 10000000; i++) {
                 ctx.fillStyle = 'rgba(0,0,255, 0.2)';
@@ -15,13 +24,7 @@
             }
         }
 
-        const btnFill = document.querySelector('#fill');
-        btnFill.addEventListener('click', expensiveOp);
-
-        const btnAlert = document.querySelector('#alert');
-        btnAlert.addEventListener('click', function(){
-            alert('Hello World')
-        })
+        
     </script>
 </head>
 <body>
